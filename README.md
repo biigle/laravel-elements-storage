@@ -2,6 +2,8 @@
 
 [ELEMENTS](https://elements.tv) storage driver for Laravel/Lumen.
 
+**Warning:** This driver [guesses](https://github.com/mzur/guess-mime) the file MIME types based on the filename (as ELEMENTS does not provide the MIME type). MIME types can be easily spoofed if the files are not under your control.
+
 ## Installation
 
 Require the package with Composer:
