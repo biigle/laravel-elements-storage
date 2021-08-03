@@ -1,0 +1,29 @@
+{
+    "name": "biigle/laravel-elements-storage",
+    "description": "ELEMENTS storage driver for Laravel/Lumen.",
+    "type": "library",
+    "require": {
+        "biigle/flysystem-elements": "^1.0",
+        "illuminate/support": "^5.1|^6.0|^7.0|^8.0",
+        "illuminate/filesystem": "^5.1|^6.0|^7.0|^8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Zurowietz",
+            "email": "martin@zurowietz.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Biigle\\Filesystem\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Biigle\\Filesystem\\ElementsServiceProvider"
+            ]
+        }
+    }
+}
