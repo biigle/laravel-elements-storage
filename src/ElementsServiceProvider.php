@@ -2,10 +2,11 @@
 
 namespace Biigle\Filesystem;
 
+use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
+use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Config;
 use League\Flysystem\Filesystem;
-use Illuminate\Support\ServiceProvider;
 
 class ElementsServiceProvider extends ServiceProvider
 {

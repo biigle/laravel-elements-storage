@@ -1,6 +1,6 @@
 <?php
 
-namespace Mzur\Filesystem;
+namespace Biigle\Filesystem;
 
 use Biigle\Flysystem\Elements\ElementsAdapter as BaseAdapter;
 
