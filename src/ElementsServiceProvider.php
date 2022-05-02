@@ -3,6 +3,7 @@
 namespace Biigle\Filesystem;
 
 use GuzzleHttp\Client;
+use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Config;
@@ -26,7 +27,7 @@ class ElementsServiceProvider extends ServiceProvider
             ]);
             $adapter = new ElementsAdapter($client, $config['prefix'] ?? null);
 
-            return new Filesystem($adapter, $this->getFlyConfig($config));
+            return new FilesystemAdapter(new Filesystem($adapter), $adapter, $config);
         });
     }
 
@@ -38,21 +39,5 @@ class ElementsServiceProvider extends ServiceProvider
     public function register()
     {
         //
-    }
-
-    /**
-     * Create the Flysystem configuration.
-     *
-     * @param array $config
-     *
-     * @return Config
-     */
-    protected function getFlyConfig($config)
-    {
-        $flyConfig = new Config([
-            'disable_asserts' => Arr::get($config, 'disableAsserts', false),
-        ]);
-
-        return $flyConfig;
     }
 }
