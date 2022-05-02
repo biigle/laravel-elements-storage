@@ -25,7 +25,7 @@ class ElementsServiceProvider extends ServiceProvider
                     'Authorization' => 'Bearer '.$config['token'],
                 ],
             ]);
-            $adapter = new ElementsAdapter($client, $config['prefix'] ?? null);
+            $adapter = new ElementsAdapter($client, $config['prefix'] ?? '');
 
             return new FilesystemAdapter(new Filesystem($adapter), $adapter, $config);
         });
