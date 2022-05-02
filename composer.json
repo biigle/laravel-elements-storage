@@ -3,7 +3,7 @@
     "description": "ELEMENTS storage driver for Laravel/Lumen.",
     "type": "library",
     "require": {
-        "biigle/flysystem-elements": "^1.0",
+        "biigle/flysystem-elements": "^2.0",
         "illuminate/support": "^9.0",
         "illuminate/filesystem": "^9.0"
     },
