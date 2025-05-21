@@ -4,8 +4,8 @@
     "type": "library",
     "require": {
         "biigle/flysystem-elements": "^2.0",
-        "illuminate/support": "^9.0 || ^10.0 || ^11.0",
-        "illuminate/filesystem": "^9.0 || ^10.0 || ^11.0"
+        "illuminate/support": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+        "illuminate/filesystem": "^9.0 || ^10.0 || ^11.0 || ^12.0"
     },
     "license": "MIT",
     "authors": [
